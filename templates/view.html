@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> View photos </title>
+    <link rel = "stylesheet" href = "./static/styles.css"
+  </head>
+  <body>
+    {% for item in files %}
+    <img src = "{{url_for('get_file',filename = item)}}" alt = {{item}}>
+    {% endfor %}
+    <br>
+    <a href = "{{url_for('index')}}"> BACK </a>
+    
+  </body>
+</html>
